@@ -49,3 +49,8 @@ this be ES6, node doesnt support yet, Babel needed
 *read documentation ffs*
 - path `reference/path_ref.js`
 - filesystem (fs) `reference/fs_ref.js`
+*other modules tested/learnt in REPL
+- os
+- url
+- **event** :star: `reference/event_ref.js`
+- **http** :star: `reference/http_ref.js`
