@@ -4,6 +4,12 @@
 
 ---
 
+### What is node?
+
+Node is a single-threaded event-driven javascript execution environment
+
+*ab docs padho...*
+
 ### Why node? 
 
 - fast, efficient, scalable
