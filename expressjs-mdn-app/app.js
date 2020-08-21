@@ -1,5 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
+
+// Setup mongoose connection
+var mongoose = require('mongoose')
+var mongodb =  'mongodb+srv://psd:<password>@fallout.qgm0g.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority'
+mongoose.connect(mongodb, {useNewUrlParser: true, useUnifiedTopology: true})
+var db = mongoose.connection
+db.on('error', console.log.bind(console, 'mongodb connection error'))
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -11,7 +19,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
