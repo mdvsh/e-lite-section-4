@@ -1,0 +1,45 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <%= title %>
+    </h1>
+    <p class="subtitle">
+      Welcome to <em>LocalLibrary</em>, a very basic Express website developed
+      while following a tutorial example on the Mozilla Developer Network.
+    </p>
+    <br><br>
+    <h2 class="title">Records</h2>
+    <% if (error) { %>
+    <p class="subtitle">Error retrieving data from server.</p>
+    <% } else { %>
+    <p class="subtitle">
+      The Library contains the following record counts:
+      <hr>
+    </p>
+    <table class="table is-striped is-hoverable is-fullwidth">
+      <tbody>
+        <tr>
+          <td><b>Books</b></td>
+          <td><%= data.book_count %></td>
+        </tr>
+        <tr>
+          <td><b>Book Copies</b></td>
+          <td><%= data.book_instance_count %></td>
+        </tr>
+        <tr>
+          <td><b>Copies Available</b></td>
+          <td><%= data.book_instance_available %></td>
+        </tr>
+        <tr>
+          <td><b>Authors</b></td>
+          <td><%= data.author_count %></td>
+        </tr>
+        <tr>
+          <td><b>Genres</b></td>
+          <td><%= data.genre_count %></td>
+        </tr>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+</section>
