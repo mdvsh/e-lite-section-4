@@ -15,7 +15,9 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-ejs-extend": "0.0.1",
+    "express-ejs-layouts": "^2.5.0",
     "http-errors": "~1.6.3",
+    "moment": "^2.27.0",
     "mongodb": "^3.6.0",
     "mongoose": "^5.10.0",
     "morgan": "~1.9.1"

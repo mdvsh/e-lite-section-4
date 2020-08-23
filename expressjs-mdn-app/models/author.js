@@ -15,11 +15,12 @@ AuthorSchema.virtual("name").get(function () {
   // We want to make sure we handle the exception by returning an empty string for that case
   var fname = "";
   if (this.first_name && this.family_name) {
-    fname = this.first_name + ", " + this.family_name;
+    fname = this.first_name + " " + this.family_name;
   }
   if (!this.first_name || !this.family_name) {
     fname = "";
   }
+  return fname;
 });
 
 // Virtual property author's lifespan

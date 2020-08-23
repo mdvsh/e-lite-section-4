@@ -1,5 +1,19 @@
 ## code for the localLibrary website
-### written in expressJS with MongoDB while following the MDN turorial
+### mdn-localLibrary-express-ejs
+
+This is a simple web app, that provides an online catalog for a small local library, which the users can use to browse the books and perform CRUD operations.
+
+Tutorial available [here](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) from MDN. The `/views` files are written in EJS template engine since I didn't really like the pug framework
+
+<h3>Stack</h3>
+<ul>
+  <li>Express </li>
+  <li>MongoDB + Mongoose </li>
+  <li>EJS </li>
+  <li>Bulma</li>
+</ul>
+
+---
 
 #### epic links to read further
 

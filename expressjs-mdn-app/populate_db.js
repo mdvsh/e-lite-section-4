@@ -95,6 +95,7 @@ function bookInstanceCreate(book, imprint, due_back, status, cb) {
   bookinstance.save(function (err) {
     if (err) {
       console.log("ERROR CREATING BookInstance: " + bookinstance);
+      console.log(err)
       cb(err, null);
       return;
     }

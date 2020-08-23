@@ -2,7 +2,9 @@
 
 var createError = require('http-errors');
 
-var express = require('express'); // Setup mongoose connection
+var express = require('express');
+
+var expressLayouts = require('express-ejs-layouts'); // Setup mongoose connection
 
 
 var mongoose = require('mongoose');
@@ -32,6 +34,7 @@ var app = express(); // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({

@@ -1,0 +1,29 @@
+<h1 class="title"><%= title %></h1>
+<hr />
+<div class="content is-medium">
+  <ol class="is-upper-roman">
+    <% for(value in data) { %>
+    <li>
+      <a href="<%=data[value].url%>"
+        ><%=data[value].book.title%> : <%= data[value].imprint%>
+      </a>
+      - <% if(data[value].status == 'Available') { %>
+      <span class="has-text-success"> <%= data[value].status %> </span>
+      <% } else if(data[value].status == 'Maintenance'){ %>
+      <span class="has-text-danger"> <%= data[value].status %> </span>
+      <% } else { %>
+      <span class="has-text-danger"> <%= data[value].status %> </span>
+      <% } %> <% if(data[value].status != 'Available'){ %>
+      <span> <b>(Due: <%= data[value].dueFormatted %>)</b> </span>
+      <% } %>
+    </li>
+
+    <% };%>
+  </ul>
+</div>
+
+<% if(data.length == 0) { %>
+<p class="subtitle">
+  Currently we don't have any copies in our collection. Please check-in later.
+</p>
+<% } %>

@@ -1,0 +1,26 @@
+<h1 class="title"><%= title %></h1>
+<table class="table is-striped is-hoverable is-fullwidth">
+    <tbody>
+      <thead>
+        <tr>
+          <td><b>Title</b></td>
+          <td><b>Author</b></td>
+        </tr>
+      </thead>
+    </tbody>
+  
+    <tbody>
+      <% for(book in data) { %>
+      <tr>
+        <td><a href="<%=data[book].url%>"><%=data[book].title%></a></td>
+        <td><%=data[book].author.name%></td>
+      </tr>
+      <% }; %>
+    </tbody>
+  </table>
+  
+  <% if(data.length == 0) { %>
+  <p class="subtitle">
+    There are no books currently here. Please check-in later.
+  </p>
+  <% } %>

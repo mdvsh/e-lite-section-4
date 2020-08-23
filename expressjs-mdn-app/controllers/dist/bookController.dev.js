@@ -38,13 +38,25 @@ exports.index = function (req, res) {
     });
   });
 }; // The async.parallel() method is passed an object with functions for getting the counts for each of our models.
-//  These functions are all started at the same time. When all of them have completed the final callback is invoked with 
+//  These functions are all started at the same time. When all of them have completed the final callback is invoked with
 // the counts in the results parameter (or an error).
 // Display list of all books.
 
 
-exports.book_list = function (req, res) {
-  res.send("NOT IMPLEMENTED: Book list");
+exports.book_list = function (req, res, next) {
+  Book.find({}, "title author") // return only title and author params of book
+  .populate("author") // this replaces stored bookid with full author details
+  .exec(function (err, results) {
+    if (err) {
+      return next(err);
+    } // succesfull
+
+
+    res.render("book_list", {
+      title: "Book List",
+      data: results
+    });
+  });
 }; // Display detail page for a specific book.
 
 
