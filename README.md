@@ -13,3 +13,5 @@ a simple Node.js program which reads a file with a math expression on each line 
 a simple Node.js program which takes in a GitHub username via a command line argument and fetches the given user’s repositories.
 
 ## Exercise 3
+
+a simple Express.js server which greets the user.

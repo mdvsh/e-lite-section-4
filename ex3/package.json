@@ -1,0 +1,22 @@
+{
+  "name": "ex3",
+  "version": "1.0.0",
+  "description": "code for exercise 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PseudoCodeNerd/e-lite-section-4.git"
+  },
+  "author": "Madhav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PseudoCodeNerd/e-lite-section-4/issues"
+  },
+  "homepage": "https://github.com/PseudoCodeNerd/e-lite-section-4#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
