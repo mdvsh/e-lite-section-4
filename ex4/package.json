@@ -4,8 +4,11 @@
   "description": "a MERN stack practice project today, a potential microblogging site tmrw",
   "main": "server.js",
   "scripts": {
+    "front-install": "npm install --prefix frontend",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "server": "nodemon server.js",
+    "front": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run front\""
   },
   "repository": {
     "type": "git",
