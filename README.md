@@ -15,3 +15,10 @@ a simple Node.js program which takes in a GitHub username via a command line arg
 ## Exercise 3
 
 a simple Express.js server which greets the user.
+
+## Exercise 4
+*WIP*
+
+a CRUD API for `dweets` (140 Character strings) + a frontend + auth (w/ passport and json_webtoken strategy)
+
+### fullstack bb! **MERN**
