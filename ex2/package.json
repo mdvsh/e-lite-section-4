@@ -1,0 +1,16 @@
+{
+  "name": "ex2",
+  "version": "1.0.0",
+  "description": "code for exercise 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "yargs": "^15.4.1"
+  }
+}
