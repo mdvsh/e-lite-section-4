@@ -8,8 +8,10 @@ require("dotenv").config();
 var indexRouter = require("./routes/index");
 var dweetRouter = require("./routes/dweets");
 var dweetListRouter = require("./routes/dweetlist")
+var compression = require('compression');
+var helmet = require('helmet');
 var app = express();
-
+app.use(helmet());
 var mongoose = require("mongoose");
 var mongoDB = `mongodb+srv://god:${process.env.PSWD}@dweeter-ex4.xkhgv.gcp.mongodb.net/${process.env.NAME}?retryWrites=true&w=majority`;
 mongoose.connect(
@@ -32,6 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(compression()); //Compress all routes
 
 app.use("/", indexRouter);
 app.use("/dweet", dweetRouter);
