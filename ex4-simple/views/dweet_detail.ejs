@@ -1,0 +1,19 @@
+<h1 style="text-align: center;"><%= title %> :</h1>
+
+<h3>
+  <%= ddetail.dweet %>
+</h3>
+<blockquote>
+  - <%= ddetail.test %> | <code><%= ddetail.formatted_date %></code>
+</blockquote>
+
+<br />
+<a href="/dweets" class="button">Go Back</a>
+
+<% function update(foo){return ddetail.url + `/${foo}`}; %>
+
+<p style="text-align: center;">
+  <a href=" <%=update('update');%> ">Update Dweet</a>
+    |
+  <a href=" <%=update('delete');%> ">Delete Dweet</a>
+</p>

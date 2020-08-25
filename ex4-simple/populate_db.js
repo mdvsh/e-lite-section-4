@@ -35,8 +35,8 @@ function userCreate(name, email, cb) {
   });
 }
 
-function dweetCreate(content, poster, cb) {
-  var aDweet = new Dweet({ dweet: content, posted_by: poster });
+function dweetCreate(content, poster, test, cb) {
+  var aDweet = new Dweet({ dweet: content, posted_by: poster, test: test });
 
   aDweet.save((err) => {
     if (err) {
@@ -77,6 +77,7 @@ function createDweets(cb) {
         dweetCreate(
           "Lorem ipsum dolor sit amet, consectetuer adipiscin",
           users[0],
+          'Madhav Shekhar',
           callback
         );
       },
@@ -84,6 +85,7 @@ function createDweets(cb) {
         dweetCreate(
           "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring",
           users[1],
+          'Soumitra Shewale',
           callback
         );
       },
@@ -91,6 +93,7 @@ function createDweets(cb) {
         dweetCreate(
           "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musi",
           users[1],
+          'Soumitra Shewale',
           callback
         );
       },
@@ -98,6 +101,7 @@ function createDweets(cb) {
         dweetCreate(
           "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV q",
           users[2],
+          'Kavin Valli',
           callback
         );
       },
@@ -105,6 +109,7 @@ function createDweets(cb) {
         dweetCreate(
           "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live.",
           users[0],
+          'Madhav Shekhar',
           callback
         );
       },
@@ -112,6 +117,7 @@ function createDweets(cb) {
         dweetCreate(
           "The European languages are members of the same family. Their separate existence is a myth.",
           users[2],
+          'Kavin Valli',
           callback
         );
       },
@@ -119,6 +125,7 @@ function createDweets(cb) {
         dweetCreate(
           'abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !"§ $%& /() =?*',
           users[1],
+          'Soumitra Shewale',
           callback
         );
       },

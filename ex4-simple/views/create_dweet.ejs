@@ -1,0 +1,28 @@
+<h1><%= title %></h1>
+<div class="container">
+  <form action="" method="POST">
+    <div class="form_group">
+      <label for="dweet">Write a dweet: </label>
+      <br />
+      <textarea name="dweet" id="dweet" cols="50" rows="5" required="true" maxlength="140"
+      placeholder="<%="undefined" === typeof data ? "" : data["dweet"];%>"
+      value="<%="undefined" === typeof data ? "" : data["dweet"];%>"></textarea>
+      <div id="counter"></div>
+    </div><br>
+    <div class="form_group">
+      <label for="test">Writer's name: </label>
+      <input type="text" name="test" id="test" reaquired="true"
+      value="<%="undefined" === typeof data ? "" : data["test"];%>"
+      placeholder="who wrote dis? identify yourself!" size=30 >
+    </div>
+    <br>
+    <div class="form_group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<script>
+document.getElementById('dweet').onkeyup = function() {
+    document.getElementById('counter').innerHTML = "Characters left: "+(140-this.value.length);
+};
+</script>

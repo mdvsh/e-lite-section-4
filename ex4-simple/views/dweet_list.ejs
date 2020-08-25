@@ -1,0 +1,18 @@
+<h1 style="text-align: center;"><%= title %> :</h1>
+<ul>
+  <% for(d in dweet_list) { %>
+  <li>
+    <a href="<%=dweet_list[d].url%>"> <%=dweet_list[d].dweet%> </a>
+    <br />
+    <b><%=dweet_list[d].test%></b>  at <i> <%=dweet_list[d].formatted_date%></i>
+    <br /><br />
+  </li>
+
+  <% }; %>
+</ul>
+
+<% if(dweet_list.length == 0) { %>
+<p class="subtitle">
+  There are no books currently here. Please check-in later.
+</p>
+<% } %>
