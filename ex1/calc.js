@@ -24,9 +24,9 @@ try {
         if (err) throw err;
       }
     );
-    var data = qfile.split(/\r?\n/);
+    var data = qfile.split("\n");
     data.forEach((q) => {
-      fs.appendFile(
+      fs.appendFileSync(
         path.join(__dirname, `/ex1-solns/${i}.txt`),
         `${eval(q)}\n`,
         (err) => {

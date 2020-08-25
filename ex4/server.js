@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var port = process.env.PORT || 8000;
 var passport = require("passport");
 var auth = require("./routes/auth");
+var dweetRouter = require("./routes/dweets");
 
 var app = express();
 app.use(
@@ -22,6 +23,7 @@ mongoose
 app.use(passport.initialize());
 require("./config/passport")(passport);
 app.use("/api/auth", auth);
+app.use("/dweet", dweetRouter);
 
 app.get("/", (req, res) => {
   res.send("hello");
