@@ -18,9 +18,12 @@ a simple Express.js server which greets the user.
 
 ## Exercise 4
 
-*WIP*
+*WIP: not completed*
 a CRUD API for `dweets` (140 Character strings) + a frontend + auth (w/ passport and json_webtoken strategy)
 
 `ex4-simple` for the time being... (no auth, minimal frontend)
 
+also, shitty UI please don't judge. I'm still working on the better one :pensive:
+
+deployed [here](https://hidden-wildwood-42100.herokuapp.com/)
 
